@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: tablazat;
+    src: url(../Fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: focim;
+    src: url(../Fonts/Merriweather/Merriweather-Bold.ttf);
+}
+
+@font-face {
+    font-family: etelek;
+    src: url(../Fonts/Source_Code_Pro/static/SourceCodePro-Bold.ttf);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background-image: url("../Képek/hatter.jpg");
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: focim;
+}
+
+h2 {
+    text-align: center;
+    font-family: focim;
+}
+
+.buttonmain {
+    width: 20vw;
+    max-width: 450px;
+    min-width: 300px;
+    cursor: pointer;
+    height: 20vh;
+    max-height: 200px;
+    min-height: 100px;
+    background-size: 100% 100%;
+    font-size: 30px;
+    margin: 2vw;
+    font-family: etelek;
+    color: white;
+}
+
+.rendeles {
+    background-image: url('../Képek/szakacskonyv.jpg');
+    color: white;
+}
+
+.rendeles h2 {
+    color: white;
+}
+
+.rendeles h3 {
+    text-align: center;
+    color: white;
+}
+
+.amerikai {
+    background-image: url('../képek/amerikai.png');
+    background-size: 100%;
+}
+
+.magyaros {
+    background-image: url('../képek/magyaros.png');
+}
+
+.kinai {
+    background-image: url('../képek/kinai.png');
+}
+
+.olasz {
+    background-image: url('../képek/teszta.png');
+}
+
+.amerikai #a {
+    color: white;
+}
+
+#ei {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.etelektablazat {
+    position: relative;
+    float: right;
+    font-family: tablazat;
+    width: 100%;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+.kek {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: blue;
+}
+
+.barnas {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: brown;
+}
+
+.barnas a {
+    color: brown;
+    text-decoration: none;
+}
+
+.zold {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: darkgreen;
+}
+
+.zold a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.sarga {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: yellow;
+}
+
+.sarga a {
+    color: yellow;
+    text-decoration: none;
+}
+
+td {
+    border-bottom: solid white 2px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: double white 10px;
+}
+
+form {
+    font-family: tablazat;
+    font-size: 14px;
+}
+
+.kek a {
+    text-decoration: none;
+    color: blue;
+}
+
+.szureslista {
+    width: 30%;
+    float: left;
+}
+
+#kcal {
+    width: 60px;
+}
+
+.jm {
+    font-family: tablazat;
+    text-align: justify;
+    font-style: italic;
+    color: blue;
+    font-size: medium;
+}
+
+.jm2 {
+    color: brown;
+    font-family: tablazat;
+    text-align: justify;
+    font-style: italic;
+    font-size: medium;
+}
+
+.jm3 {
+    color: darkgreen;
+    font-family: tablazat;
+    text-align: justify;
+    font-style: italic;
+    font-size: medium;
+}
+
+.jm4 {
+    color: yellow;
+    font-family: tablazat;
+    text-align: justify;
+    font-style: italic;
+    font-size: medium;
+}
+
+ul {
+    list-style-type: none;
+    cursor: pointer;
+    font-family: tablazat;
+}
+
+footer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    text-align: center;
+    margin: 0px 60px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: etelek;
+}
+
+#menucim {
+    font-family: tablazat;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+#szerzo {
+    text-align: center;
+    background: local;
+    background-color: rgba(214, 207, 207, 0.2);
+}
+
+#leadas {
+    margin-left: 180px;
+}
+
+.konyv a {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    bottom: 0px;
+    text-decoration: none;
+    cursor: pointer
+}
+
+#rendeles {
+    margin-left: 30px;
+}
+
+#kepek {
+    margin: auto;
+    width: 40vw;
+    height: 30vw;
+}
+
+#kedvencek {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .buttonmain {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .buttonmain {
+        width: 100%;
+    }
+}

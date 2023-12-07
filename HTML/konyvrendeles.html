@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Osváth Tibor (J9JTMI)" content="Mit főzzek ma?">
+    <title>Szakácskönyv rendelés</title>
+    <link href="../Képek/fozes.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/mfm.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#rendeles").validate({
+                rules: {
+                    vnev: "required",
+                    knev: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    tel: {
+                        required: true,
+                        number: true,
+                    },
+                    lakcim: "required",
+                    elfogad: "required",
+                    nap:"required",
+                },
+                messages: {
+                    vnev: " Írd be a vezetékneved!",
+                    knev: " Írd be a keresztneved!",
+                    email: " Kérlek valós email címet adj meg!",
+                    tel: "Kérlek add meg a telefonszámod!",
+                    lakcim: "Kérlek add meg a lakcímed!",
+                    elfogad:"Kérlek járulj hozzá az adataid, csomag kézbesítéséhez szükséges, felhasználásához!",
+                    nap:"Kérlek adj meg egy számodra megfelelő napot!",
+                },
+            });
+        });
+    </script>
+    <style>
+        label.error {
+            color:white;
+            font-family: focim;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body class="rendeles">
+    <h2>Szakácskönyv rendelése</h2>
+    <h3>Rendelje meg most a legújabb szakácskönyvünket, amely nagyszerű karácsonyi ajándékként szolgálhat szeretteinek telis-tele finomabbnál finomabb receptekkel!</h3>
+    <form method="post" action="#" id="rendeles" novalidate>
+        <p><label for="vnev">Vezetéknév: </label>
+            <input type="text" id="vnev" name="vnev" placeholder="Minta">
+        </p>
+        <br>
+        <p><label for="knev">Keresztnév: </label>
+            <input type="text" id="knev" name="knev" placeholder="Mária">
+        </p>
+        <br>
+        <p><label for="email">Email cím: </label>
+            <input type="email" id="email" name="email" placeholder="mintamari@gmail.com">
+        </p>
+        <br>
+        <p><label for="tel">Telefonszám: </label>
+            <input type="tel" id="tel" name="tel" placeholder="+36 12 345 6789">
+        </p>
+        <br>
+        <p><label for="lakcim">Cím: </label>
+            <input type="text" id="lakcim" name="lakcim" placeholder="Város Utca neve házszám">
+        </p>
+        <br>
+        <p><label for="haz">Házhozszállítás vagy csomagautomatába szállítással szeretné a könyvet átvenni?</label>
+            <br>
+            <br>
+            <input type="radio" id="haz" name="atvetel"> Házhozszállítás
+            <br>
+            <label for="box"></label>
+            <input type="radio" id="box" name="atvetel"> Csomagautomatába szállítás
+        </p>
+        <br>
+        <p><label for="nap">Melyik nap szeretné átvenni?</label>
+            <input type="date" id="nap" name="nap">
+        </p>
+        <br>
+        <p><label for="kiszido">Melyik idősávban szeretné kiszállítást?(opcionális)</label>
+            <input type="time" id="kiszido" name="kiszido">-tól
+            <input type="time" id="kiszido" name="kiszido">-ig
+        </p>
+        <br>
+        <input type="checkbox" name="elfogad" id="elfogad">
+        <label for="elfogad">Hozzájárulok adataim, a csomag kézbesítéséhez szükséges, felhasználásához.</label>
+        <br>
+        <br>
+        <input type="submit" value="Rendelés leadása" id="leadas">
+    </form>
+</body>
+<br>
+<br>
+</html>

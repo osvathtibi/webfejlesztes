@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js">
+    </script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#images').galleria(
+                width = 500,
+                height = 500
+            );
+        });
+    </script>
+    <style>
+        .galleria {
+            margin: auto;
+            width: 90vw;
+            height: 90vw;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <article id="images" class="galleria">
+        <img src="fr/1.jpg" alt="My description" title="My title">
+        <img src="fr/2.jpg" alt="My description2" title=" My title2">
+        <img src="fr/3.jpg" alt="My description3" title="My title3">
+        <img src="fr/4.jpg" alt="My description4" title=" My title4">
+        <img src="fr/5.jpg" alt="My description5" title="My title5">
+        <img src="fr/6.jpg" alt="My description6" title=" My title6">
+        <img src="fr/7.jpg" alt="My description7" title="My title7">
+        <img src="fr/8.jpg" alt="My description8" title=" My title8">
+    </article>
+</body>
+
+</html>

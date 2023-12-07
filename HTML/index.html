@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Osváth Tibor (J9JTMI)" content="Mit főzzek ma?">
+    <title>Mit főzzek ma?</title>
+    <link href="../Képek/fozes.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="../reszp_galeria/galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="../reszp_galeria/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#kepek').galleria({
+                width:650,
+                height:500
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Mit főzzek ma?</h1>
+    <h2>Válaszd ki, milyen stílusú ételt szeretnél enni!</h2>
+    <div class="flex-container">
+        <form action="amerikai.html" method="post" target="_blank">
+            <button class="buttonmain amerikai">Amerikai ételek</button>
+        </form>
+        <form action="magyaros.html" method="post" target="_blank">
+            <button class="buttonmain magyaros">Magyaros ételek</button>
+        </form>
+        <form action="kinai.html" method="post" target="_blank">
+            <button class="buttonmain kinai">Ázsiai ételek</button>
+        </form>
+        <form action="olasz.html" method="post" target="_blank">
+            <button class="buttonmain olasz">Olasz ételek</button>
+        </form>
+    </div>
+    <div class="flex-container konyv">
+        <a href="konyvrendeles.html" target="_blank">Ide kattintva rendelje meg legújabb szakácskönyvünket a karácsonyi
+            időszak előtt, amely akár
+            tökéletes ajándék is lehet a fa alá szeretteinek!</a>
+    </div>
+    <br>
+    <br>
+    <h2>Ti küldtétek!</h2>
+    <h3 id="kedvencek">Kedvenc receptjeitek képeit az alábbi galériában láthatjátok!</h3>
+    <article id="kepek">
+        <img src="../Képek/rakottteszta.jpg" alt="Rakott tészta" title="Házi rakott tészta">
+        <img src="../Képek/csiga.jpg" alt="Kakaós csiga" title="Kakaós csiga">
+        <img src="../Képek/babos.jpg" alt="Babfőzelék" title="Babfőzelék">
+        <img src="../Képek/hamburger.jpg" alt="Hamburger" title="Hamburger házilag">
+        <img src="../Képek/pizza.jpg" alt="Pizza" title="Pizza">
+        <img src="../Képek/rakottkrumpli.jpg" alt="Rakott krumpli" title="Rakott krumpli">
+        <img src="../Képek/fank.jpg" alt="Fánk" title="Baracklekvárral töltött fánk">
+        <img src="../Képek/sultcsirke.jpg" alt="Sült csirke" title="Egész sült csirke">
+        <img src="../Képek/zoldseges.jpg" alt="Zöldségleves" title="Zöldségleves">
+        <img src="../Képek/szendvics.jpg" alt="Szendvics" title="Szendvics">
+    </article>
+</body>
+
+</html>

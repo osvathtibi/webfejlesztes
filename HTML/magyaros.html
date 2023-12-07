@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Osváth Tibor (J9JTMI)" content="Mit főzzek ma?">
+    <title>Magyaros ételek</title>
+    <link href="../Képek/fozes.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/mfm.js"></script>
+</head>
+
+<body class="magyaros">
+    <h1>Magyaros ételek</h1>
+    <div class="flex-container szureslista">
+        <form>
+            <label>Allergének:</label>
+            <br>
+            <input type="checkbox" name="gm" id="gm" onclick="szures()">
+            <label for="gm">Gluténmentes</label>
+            <br>
+            <input type="checkbox" name="lm" id="lm" onclick="szures()">
+            <label for="lm">Laktózmentes</label>
+            <br>
+            <input type="checkbox" name="cm" id="cm" onclick="szures()">
+            <label for="cm">Cukormentes</label>
+            <br>
+            <input type="checkbox" name="va" id="va" onclick="szures()">
+            <label for="va">Vegetáriánus</label>
+            <br>
+            <input type="checkbox" name="vn" id="vn" onclick="szures()">
+            <label for="vn">Vegán</label>
+            <br>
+            <br>
+            <br>
+            <label>Max. elkészítési idő:</label>
+            <input type="range" name="ido" id="ido" min="15" max="240" step="5" value="240" onchange="idovaltozas(this.value); szures();">
+            <input type="text" id="ei" value="240 perc" readonly disabled>
+            <label for="ei"></label>
+            <br>
+            <br>
+            <br>
+            <label>Árkategória:</label>
+            <br>
+            <input type="radio" name="ar" id="mind" onclick="szures()" checked>
+            <label for="mind">Mind</label>
+            <br>
+            <input type="radio" name="ar" id="olcso" onclick="szures()">
+            <label for="olcso">Olcsó</label>
+            <br>
+            <input type="radio" name="ar" id="atl" onclick="szures()">
+            <label for="atl">Átlagos</label>
+            <br>
+            <input type="radio" name="ar" id="mf" onclick="szures()">
+            <label for="mf">Megfizethető</label>
+            <br>
+            <input type="radio" name="ar" id="kolts" onclick="szures()">
+            <label for="kolts">Költséges</label>
+            <br>
+            <br>
+            <br>
+            <label for="tipus">Melyik fogást szeretné elkészíteni?  </label>
+                <select name="tipus" id="tipus" onchange="szures()">
+                    <option value="Mind" selected>
+                        Mind
+                    </option>
+                    <option value="Leves">
+                        Leves
+                    </option>
+                    <option value="Főétel">
+                        Főétel
+                    </option>
+                    <option value="Desszert">
+                        Desszert
+                    </option>
+                </select>
+            <br>
+            <br>
+            <br>
+            <label for="kcal">Max. kalória (1 adagban)</label>
+            <input type="number" name="kcal" id="kcal" value="0" min="0" onchange="szures()" onkeyup="szures()">
+            <br>
+            <br>
+            <label for="keres">Keresés név alapján</label>
+            <br>
+            <input type="text" name="keres" id="keres" onkeyup="szures()">
+            <br>
+            <br>
+            <label for="reset"></label>
+            <input type="reset" id="reset"  value="Alapértelmezett" onclick="document.location.reload()">
+        </form>
+    </div>
+    <div class="flex-container">
+        <br>
+        <table class="etelektablazat barnas" id="etelek">
+            <tr>
+            <th width="40%">Név</th>
+            <th width="20%">Elkészítési idő</th>
+            <th width="20%">Árkategória</th>
+            <th width="3%">GM</th>
+            <th width="3%">LM</th>
+            <th width="3%">CM</th>
+            <th width="3%">VE</th>
+            <th width="3%">VN</th>
+            <th width="5%">Kalória</th>
+            <th style="display: none;">Kategória</th>
+            </tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=9T_yaLxH_gY" target="_blank">BABGULYÁS</a></td><td align="right">210 perc</td><td align="center">költséges</td><td align="center">H</td><td align="center">L</td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">222</td><td style="display:none;">Leves</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=Em44gkGueZ0" target="_blank">CSIKÓS TOKÁNY</a></td><td align="right">80 perc</td><td align="center">megfizethető</td><td align="center"></td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">400</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=DctsPFd0cMA" target="_blank">CSIRKEMELLPAPRIKÁS</a></td><td align="right">60 perc</td><td align="center">megfizethető</td><td align="center">G</td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">322</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=KK94zTaTlF4" target="_blank">GRÍZES TÉSZTA BARACKLEKVÁRRAL</a></td><td align="right">25 perc</td><td align="center">olcsó</td><td align="center"></td><td align="center">L</td><td align="center"></td><td align="center">V</td><td align="center"></td><td align="right">334</td><td style="display:none;">Desszert</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=r1Ty1985A4w" target="_blank">GULYÁSLEVES</a></td><td align="right">195 perc</td><td align="center">költséges</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td><td align="right">591</td><td style="display:none;">Leves</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=tXaAWMPikto" target="_blank">HAGYOMÁNYOS LEBBENCSLEVES</a></td><td align="right">65 perc</td><td align="center">megfizethető</td><td align="center"></td><td align="center">L</td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">357</td><td style="display:none;">Leves</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=MKQTo1KKx5c" target="_blank">MÁKOS GUBA</a></td><td align="right">35 perc</td><td align="center">olcsó</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center">V</td><td align="center"></td><td align="right">322</td><td style="display:none;">Desszert</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=ingu_gssNSI" target="_blank">MÁTRAI BORZASKA</a></td><td align="right">40 perc</td><td align="center">átlagos</td><td align="center"></td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">587</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=h3XvqaCWSH8" target="_blank">RAKOTT KRUMPLI</a></td><td align="right">65 perc</td><td align="center">költséges</td><td align="center">G</td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">739</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=ewLUWAhFCnI" target="_blank">RAKOTT ZÖLDBAB</a></td><td align="right">75 perc</td><td align="center">átlagos</td><td align="center"></td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">412</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=I2HLZeWL_OU" target="_blank">SÜLT OLDALAS</a></td><td align="right">150 perc</td><td align="center">átlagos</td><td align="center">G</td><td align="center">L</td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">871</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=N7SjqgWiaPI" target="_blank">TARHONYÁS HÚS</a></td><td align="right">160 perc</td><td align="center">átlagos</td><td align="center"></td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">227</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=mWjRicZkvik" target="_blank">TÖLTÖTT KÁPOSZTA</a></td><td align="right">210 perc</td><td align="center">megfizethető</td><td align="center">G</td><td align="center"></td><td align="center">C</td><td align="center"></td><td align="center"></td><td align="right">340</td><td style="display:none;">Főétel</td></tr>
+            <tr><td><a href="https://www.youtube.com/watch?v=oSZxsyUvLKw" target="_blank">TÚRÓGOMBÓC</a></td><td align="right">30 perc</td><td align="center">átlagos</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center">V</td><td align="center"></td><td align="right">164</td><td style="display:none;">Desszert</td></tr>
+
+            <tr><td class="jm2" colspan="9">Jelmagyarázat: GM: Gluténmentes; LM: Laktózmentes; CM: Cukormentes; VA: Vegetáriánus; VN: Vegán; <br>Kattintson a választott étel nevére, és tekintse meg az elkészítéséről szóló videót!</td></tr> 
+        </table>
+        <br>
+        <br>
+    </div>
+    <footer>
+        <br>
+        <br>
+        <p id="menucim">Nem találta meg a megfelelő receptet? Semmi gond, nézzen szét a többi kategóriában is!</p>
+        <nav>
+            <ul>
+                <li><a href="beadando.html" target="_blank" id="index">Főoldal</a></li>
+                <li><a href="amerikai.html" target="_blank" id="amerikai">Amerikai ételek</a></li>
+                <li><a href="magyaros.html" id="current" onclick="current()">Magyaros ételek</a></li>
+                <li><a href="kinai.html" target="_blank" id="azsiai">Ázsiai ételek</a></li>
+                <li><a href="olasz.html" target="_blank" id="olaszos">Olasz ételek</a></li>
+            </ul>
+        </nav>
+        <p id="szerzo">
+            <br>
+            Osváth Tibor © 2023
+            <br>
+            <br>
+        </p>    
+    </footer>
+</body>
+</html>

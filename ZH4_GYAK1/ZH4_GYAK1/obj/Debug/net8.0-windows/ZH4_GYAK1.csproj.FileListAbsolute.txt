@@ -1,0 +1,16 @@
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\bin\Debug\net8.0-windows\ZH4_GYAK1.exe
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\bin\Debug\net8.0-windows\ZH4_GYAK1.deps.json
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\bin\Debug\net8.0-windows\ZH4_GYAK1.runtimeconfig.json
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\bin\Debug\net8.0-windows\ZH4_GYAK1.dll
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\bin\Debug\net8.0-windows\ZH4_GYAK1.pdb
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.Form1.resources
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.csproj.GenerateResource.cache
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.AssemblyInfoInputs.cache
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.AssemblyInfo.cs
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.csproj.CoreCompileInputs.cache
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.dll
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\refint\ZH4_GYAK1.dll
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.pdb
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ZH4_GYAK1.genruntimeconfig.cache
+C:\Users\Tibi\source\repos\ZH4_GYAK1\ZH4_GYAK1\obj\Debug\net8.0-windows\ref\ZH4_GYAK1.dll
